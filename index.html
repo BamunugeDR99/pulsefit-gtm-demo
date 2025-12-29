@@ -1,0 +1,612 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>PulseFit Gym | Join Us</title>
+    <meta
+      name="description"
+      content="PulseFit Gym — Stronger every day. Join now and start your transformation."
+    />
+
+    <!-- ✅ Paste your GTM <script> (head) snippet right below this line for your demo -->
+
+    <style>
+      :root {
+        --bg: #0b0f19;
+        --card: rgba(255, 255, 255, 0.06);
+        --card2: rgba(255, 255, 255, 0.1);
+        --text: rgba(255, 255, 255, 0.92);
+        --muted: rgba(255, 255, 255, 0.7);
+        --line: rgba(255, 255, 255, 0.12);
+        --accent: #7c5cff;
+        --accent2: #22c55e;
+        --danger: #ef4444;
+
+        --radius: 18px;
+        --shadow: 0 10px 30px rgba(0, 0, 0, 0.35);
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+      body {
+        margin: 0;
+        font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto,
+          Helvetica, Arial, "Apple Color Emoji", "Segoe UI Emoji";
+        color: var(--text);
+        background: radial-gradient(
+            900px 600px at 15% 10%,
+            rgba(124, 92, 255, 0.35),
+            transparent 60%
+          ),
+          radial-gradient(
+            900px 600px at 85% 30%,
+            rgba(34, 197, 94, 0.2),
+            transparent 60%
+          ),
+          linear-gradient(180deg, #070a12, var(--bg));
+        min-height: 100vh;
+      }
+
+      a {
+        color: inherit;
+        text-decoration: none;
+      }
+      .container {
+        width: min(1100px, 92vw);
+        margin: 0 auto;
+        padding: 28px 0 60px;
+      }
+
+      /* Header */
+      .topbar {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 16px;
+        padding: 14px 18px;
+        border: 1px solid var(--line);
+        background: rgba(255, 255, 255, 0.03);
+        border-radius: var(--radius);
+        backdrop-filter: blur(10px);
+        box-shadow: var(--shadow);
+      }
+      .brand {
+        display: flex;
+        align-items: center;
+        gap: 12px;
+        font-weight: 800;
+        letter-spacing: 0.3px;
+      }
+      .logo {
+        width: 38px;
+        height: 38px;
+        border-radius: 12px;
+        background: conic-gradient(
+          from 180deg,
+          var(--accent),
+          var(--accent2),
+          var(--accent)
+        );
+        box-shadow: 0 8px 18px rgba(124, 92, 255, 0.25);
+      }
+      .brand small {
+        display: block;
+        font-weight: 600;
+        letter-spacing: 0.2px;
+        color: var(--muted);
+        margin-top: 1px;
+      }
+
+      .nav-actions {
+        display: flex;
+        gap: 10px;
+        flex-wrap: wrap;
+        justify-content: flex-end;
+      }
+
+      /* Buttons */
+      .btn {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        gap: 10px;
+        padding: 10px 14px;
+        border-radius: 14px;
+        border: 1px solid var(--line);
+        background: rgba(255, 255, 255, 0.05);
+        color: var(--text);
+        font-weight: 650;
+        cursor: pointer;
+        transition: transform 0.12s ease, background 0.12s ease,
+          border-color 0.12s ease;
+        user-select: none;
+      }
+      .btn:hover {
+        transform: translateY(-1px);
+        background: rgba(255, 255, 255, 0.09);
+        border-color: rgba(255, 255, 255, 0.2);
+      }
+      .btn:active {
+        transform: translateY(0px);
+      }
+      .btn-primary {
+        border-color: rgba(124, 92, 255, 0.5);
+        background: linear-gradient(
+          135deg,
+          rgba(124, 92, 255, 0.35),
+          rgba(124, 92, 255, 0.1)
+        );
+      }
+      .btn-whatsapp {
+        border-color: rgba(34, 197, 94, 0.55);
+        background: linear-gradient(
+          135deg,
+          rgba(34, 197, 94, 0.3),
+          rgba(34, 197, 94, 0.1)
+        );
+      }
+      .btn-instagram {
+        border-color: rgba(236, 72, 153, 0.55);
+        background: linear-gradient(
+          135deg,
+          rgba(236, 72, 153, 0.28),
+          rgba(124, 92, 255, 0.1)
+        );
+      }
+
+      /* Hero */
+      .hero {
+        margin-top: 22px;
+        display: grid;
+        grid-template-columns: 1.1fr 0.9fr;
+        gap: 18px;
+        align-items: stretch;
+      }
+      @media (max-width: 900px) {
+        .hero {
+          grid-template-columns: 1fr;
+        }
+      }
+
+      .hero-left {
+        border-radius: var(--radius);
+        border: 1px solid var(--line);
+        background: rgba(255, 255, 255, 0.03);
+        backdrop-filter: blur(10px);
+        box-shadow: var(--shadow);
+        padding: 26px;
+        position: relative;
+        overflow: hidden;
+      }
+      .hero-left::before {
+        content: "";
+        position: absolute;
+        inset: -120px -120px auto auto;
+        width: 320px;
+        height: 320px;
+        background: radial-gradient(
+          circle at 30% 30%,
+          rgba(124, 92, 255, 0.35),
+          transparent 60%
+        );
+        transform: rotate(20deg);
+        pointer-events: none;
+      }
+      .kicker {
+        display: inline-flex;
+        align-items: center;
+        gap: 10px;
+        padding: 7px 11px;
+        border: 1px solid var(--line);
+        border-radius: 999px;
+        background: rgba(255, 255, 255, 0.04);
+        color: var(--muted);
+        font-weight: 650;
+        font-size: 13px;
+      }
+      .dot {
+        width: 8px;
+        height: 8px;
+        border-radius: 99px;
+        background: var(--accent2);
+        box-shadow: 0 0 0 4px rgba(34, 197, 94, 0.18);
+      }
+      h1 {
+        margin: 14px 0 10px;
+        font-size: clamp(28px, 4vw, 44px);
+        line-height: 1.08;
+        letter-spacing: -0.6px;
+      }
+      .lead {
+        margin: 0;
+        color: var(--muted);
+        font-size: 16px;
+        line-height: 1.55;
+        max-width: 60ch;
+      }
+
+      .feature-row {
+        margin-top: 18px;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 12px;
+      }
+      @media (max-width: 650px) {
+        .feature-row {
+          grid-template-columns: 1fr;
+        }
+      }
+      .feature {
+        border: 1px solid var(--line);
+        background: rgba(255, 255, 255, 0.04);
+        border-radius: 16px;
+        padding: 14px;
+      }
+      .feature b {
+        display: block;
+        margin-bottom: 6px;
+        font-size: 14px;
+        letter-spacing: 0.2px;
+      }
+      .feature span {
+        color: var(--muted);
+        font-size: 13px;
+        line-height: 1.45;
+      }
+
+      /* Form card */
+      .card {
+        border-radius: var(--radius);
+        border: 1px solid var(--line);
+        background: rgba(255, 255, 255, 0.04);
+        backdrop-filter: blur(10px);
+        box-shadow: var(--shadow);
+        padding: 22px;
+      }
+      .card h2 {
+        margin: 0 0 6px;
+        font-size: 20px;
+        letter-spacing: -0.2px;
+      }
+      .card p {
+        margin: 0 0 14px;
+        color: var(--muted);
+        font-size: 14px;
+        line-height: 1.5;
+      }
+
+      form {
+        display: grid;
+        gap: 10px;
+        margin-top: 10px;
+      }
+      label {
+        font-size: 13px;
+        color: var(--muted);
+        margin: 2px 2px 0;
+      }
+      .field {
+        display: grid;
+        gap: 6px;
+      }
+      input {
+        width: 100%;
+        padding: 12px 12px;
+        border-radius: 14px;
+        border: 1px solid rgba(255, 255, 255, 0.14);
+        background: rgba(0, 0, 0, 0.25);
+        color: var(--text);
+        outline: none;
+        font-size: 14px;
+        transition: border-color 0.12s ease, background 0.12s ease;
+      }
+      input:focus {
+        border-color: rgba(124, 92, 255, 0.65);
+        background: rgba(0, 0, 0, 0.35);
+      }
+      .error {
+        font-size: 12px;
+        color: rgba(239, 68, 68, 0.95);
+        display: none;
+      }
+      .error.show {
+        display: block;
+      }
+
+      .form-actions {
+        display: flex;
+        gap: 10px;
+        margin-top: 6px;
+        flex-wrap: wrap;
+      }
+      .note {
+        margin-top: 10px;
+        font-size: 12px;
+        color: rgba(255, 255, 255, 0.6);
+        line-height: 1.45;
+      }
+
+      /* Footer */
+      footer {
+        margin-top: 22px;
+        color: rgba(255, 255, 255, 0.6);
+        font-size: 12px;
+        text-align: center;
+      }
+
+      /* Icons (tiny inline SVG sizing) */
+      .icon {
+        width: 18px;
+        height: 18px;
+        display: inline-block;
+      }
+    </style>
+  </head>
+
+  <body>
+    <!-- ✅ Paste your GTM <noscript> snippet right below this line for your demo -->
+
+    <div class="container">
+      <header class="topbar">
+        <div class="brand">
+          <div class="logo" aria-hidden="true"></div>
+          <div>
+            PulseFit Gym
+            <small>Stronger every day</small>
+          </div>
+        </div>
+
+        <div class="nav-actions">
+          <!-- Update these links to your real WhatsApp number / IG profile -->
+          <a
+            class="btn btn-whatsapp"
+            id="btn-whatsapp"
+            href="https://wa.me/15551234567?text=Hi%20PulseFit!%20I%20want%20to%20join%20the%20gym."
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <svg
+              class="icon"
+              viewBox="0 0 24 24"
+              fill="currentColor"
+              aria-hidden="true"
+            >
+              <path
+                d="M20.5 3.5A11 11 0 0 0 2.9 16.8L2 22l5.4-1.4A11 11 0 0 0 20.5 3.5ZM12 20a9 9 0 0 1-4.6-1.3l-.3-.2-3.2.8.9-3.1-.2-.3A9 9 0 1 1 12 20Zm5-6.2c-.3-.2-1.7-.8-2-.9s-.5-.1-.7.2-.8.9-1 .9-.4.1-.7-.1a7.3 7.3 0 0 1-2.1-1.3 7.8 7.8 0 0 1-1.5-1.9c-.2-.3 0-.5.1-.6l.4-.5c.1-.2.2-.3.3-.5s0-.4 0-.5-.7-1.7-1-2.3c-.3-.6-.5-.5-.7-.5h-.6c-.2 0-.5.1-.7.3s-1 1-1 2.4 1 2.7 1.1 2.9a10.2 10.2 0 0 0 3.9 3.6c1.5.6 2 .6 2.7.5.4-.1 1.3-.5 1.5-1s.2-1 .1-1.1-.2-.2-.5-.3Z"
+              />
+            </svg>
+            WhatsApp
+          </a>
+
+          <a
+            class="btn btn-instagram"
+            id="btn-instagram"
+            href="https://www.instagram.com/instagram/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <svg
+              class="icon"
+              viewBox="0 0 24 24"
+              fill="currentColor"
+              aria-hidden="true"
+            >
+              <path
+                d="M7 2h10a5 5 0 0 1 5 5v10a5 5 0 0 1-5 5H7a5 5 0 0 1-5-5V7a5 5 0 0 1 5-5Zm10 2H7a3 3 0 0 0-3 3v10a3 3 0 0 0 3 3h10a3 3 0 0 0 3-3V7a3 3 0 0 0-3-3Zm-5 4.5A5.5 5.5 0 1 1 6.5 14 5.5 5.5 0 0 1 12 8.5Zm0 2A3.5 3.5 0 1 0 15.5 14 3.5 3.5 0 0 0 12 10.5ZM18 6.8a1.2 1.2 0 1 1-1.2 1.2A1.2 1.2 0 0 1 18 6.8Z"
+              />
+            </svg>
+            Instagram
+          </a>
+        </div>
+      </header>
+
+      <section class="hero">
+        <div class="hero-left">
+          <div class="kicker">
+            <span class="dot"></span> New member trial week available
+          </div>
+          <h1>Train smarter.<br />Get stronger. Feel unstoppable.</h1>
+          <p class="lead">
+            PulseFit is your no-excuses gym for strength training, functional
+            fitness, and real results. Join today and we’ll contact you with
+            membership options and class timings.
+          </p>
+
+          <div class="feature-row">
+            <div class="feature">
+              <b>Strength Zone</b>
+              <span>Free weights, racks, and guided programs.</span>
+            </div>
+            <div class="feature">
+              <b>Group Classes</b>
+              <span>HIIT, conditioning, and mobility sessions.</span>
+            </div>
+            <div class="feature">
+              <b>Coaching</b>
+              <span>Personal training plans built for your goals.</span>
+            </div>
+          </div>
+        </div>
+
+        <aside class="card" aria-label="Join us form">
+          <h2>Join Us</h2>
+          <p>Fill in your details and we’ll get back to you shortly.</p>
+
+          <form id="join-form" novalidate>
+            <div class="field">
+              <label for="fullName">Full Name</label>
+              <input
+                id="fullName"
+                name="fullName"
+                type="text"
+                placeholder="e.g., Dulan Perera"
+                required
+              />
+              <div class="error" id="err-name">
+                Please enter your full name.
+              </div>
+            </div>
+
+            <div class="field">
+              <label for="email">Email</label>
+              <input
+                id="email"
+                name="email"
+                type="email"
+                placeholder="e.g., name@email.com"
+                required
+              />
+              <div class="error" id="err-email">
+                Please enter a valid email address.
+              </div>
+            </div>
+
+            <div class="field">
+              <label for="phone">Phone</label>
+              <input
+                id="phone"
+                name="phone"
+                type="tel"
+                placeholder="e.g., +94 77 123 4567"
+                required
+              />
+              <div class="error" id="err-phone">
+                Please enter a valid phone number.
+              </div>
+            </div>
+
+            <div class="form-actions">
+              <button class="btn btn-primary" id="btn-submit" type="submit">
+                <svg
+                  class="icon"
+                  viewBox="0 0 24 24"
+                  fill="currentColor"
+                  aria-hidden="true"
+                >
+                  <path
+                    d="M12 2a10 10 0 1 0 10 10A10 10 0 0 0 12 2Zm-1 14.5-4-4 1.4-1.4L11 13.7l5.6-5.6L18 9.5Z"
+                  />
+                </svg>
+                Submit
+              </button>
+
+              <button class="btn" id="btn-reset" type="reset">Reset</button>
+            </div>
+
+            <div class="note">
+              This is a dummy website for GTM training. You can track:
+              <b>form_submit</b>, <b>button_click</b>, and outbound clicks
+              (WhatsApp/Instagram).
+            </div>
+          </form>
+
+          <div
+            id="success"
+            class="note"
+            style="display: none; margin-top: 12px"
+          >
+            ✅ Thanks! Your request was submitted (demo). You can now validate
+            in GTM Preview mode.
+          </div>
+        </aside>
+      </section>
+
+      <footer>
+        © <span id="year"></span> PulseFit Gym — Demo site for GTM tracking
+        practice.
+      </footer>
+    </div>
+
+    <script>
+      // Footer year
+      document.getElementById("year").textContent = new Date().getFullYear();
+
+      // Basic validation helpers
+      const isValidEmail = (v) => /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(v.trim());
+      const isValidPhone = (v) => v.replace(/[^\d+]/g, "").length >= 9;
+
+      const form = document.getElementById("join-form");
+      const success = document.getElementById("success");
+
+      form.addEventListener("submit", function (e) {
+        e.preventDefault();
+
+        const name = document.getElementById("fullName").value.trim();
+        const email = document.getElementById("email").value.trim();
+        const phone = document.getElementById("phone").value.trim();
+
+        const errName = document.getElementById("err-name");
+        const errEmail = document.getElementById("err-email");
+        const errPhone = document.getElementById("err-phone");
+
+        let ok = true;
+
+        if (!name) {
+          errName.classList.add("show");
+          ok = false;
+        } else errName.classList.remove("show");
+        if (!isValidEmail(email)) {
+          errEmail.classList.add("show");
+          ok = false;
+        } else errEmail.classList.remove("show");
+        if (!isValidPhone(phone)) {
+          errPhone.classList.add("show");
+          ok = false;
+        } else errPhone.classList.remove("show");
+
+        if (!ok) return;
+
+        // ✅ Helpful for GTM demo: push a custom event (optional)
+        window.dataLayer = window.dataLayer || [];
+        window.dataLayer.push({
+          event: "join_form_submit",
+          form_id: "join-form",
+          full_name: name,
+          email: email,
+          phone: phone,
+        });
+
+        // ✅ Optional: show message briefly (can be removed)
+        success.style.display = "block";
+
+        // Redirect to thank-you page after successful validation
+        // (Passing values as query params is optional, but useful for demo)
+        const qs = new URLSearchParams({
+          name: name,
+          email: email,
+          phone: phone,
+        }).toString();
+
+        form.reset();
+
+        // Small delay so GTM can capture the dataLayer push before navigation
+        setTimeout(() => {
+          window.location.href = `thank-you.html?${qs}`;
+        }, 250);
+      });
+
+      // Optional: Track outbound clicks in dataLayer too (nice for GTM)
+      function dlOutbound(platform, url, elementId) {
+        window.dataLayer = window.dataLayer || [];
+        window.dataLayer.push({
+          event: "outbound_click",
+          platform,
+          url,
+          element_id: elementId,
+        });
+      }
+
+      const wa = document.getElementById("btn-whatsapp");
+      const ig = document.getElementById("btn-instagram");
+
+      wa.addEventListener("click", () =>
+        dlOutbound("whatsapp", wa.href, "btn-whatsapp")
+      );
+      ig.addEventListener("click", () =>
+        dlOutbound("instagram", ig.href, "btn-instagram")
+      );
+    </script>
+  </body>
+</html>
