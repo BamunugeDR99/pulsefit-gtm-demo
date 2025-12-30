@@ -1,189 +1,251 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>PulseFit Gym | Thank You</title>
-  <meta name="description" content="Thanks for joining PulseFit Gym. We will contact you soon." />
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>PulseFit Gym | Thank You</title>
+    <meta
+      name="description"
+      content="Thanks for joining PulseFit Gym. We will contact you soon."
+    />
 
-  <!-- ✅ Paste your GTM <script> (head) snippet right below this line for your demo -->
+    <!-- ✅ Paste your GTM <script> (head) snippet right below this line for your demo -->
+    <!-- Google Tag Manager -->
+    <script>
+      (function (w, d, s, l, i) {
+        w[l] = w[l] || [];
+        w[l].push({ "gtm.start": new Date().getTime(), event: "gtm.js" });
+        var f = d.getElementsByTagName(s)[0],
+          j = d.createElement(s),
+          dl = l != "dataLayer" ? "&l=" + l : "";
+        j.async = true;
+        j.src = "https://www.googletagmanager.com/gtm.js?id=" + i + dl;
+        f.parentNode.insertBefore(j, f);
+      })(window, document, "script", "dataLayer", "GTM-5FC45FMJ");
+    </script>
+    <!-- End Google Tag Manager -->
 
-  <style>
-    :root {
-      --bg: #0b0f19;
-      --text: rgba(255, 255, 255, 0.92);
-      --muted: rgba(255, 255, 255, 0.70);
-      --line: rgba(255, 255, 255, 0.12);
-      --accent: #7c5cff;
-      --accent2: #22c55e;
-      --radius: 18px;
-      --shadow: 0 10px 30px rgba(0, 0, 0, 0.35);
-    }
-    * { box-sizing: border-box; }
-    body {
-      margin: 0;
-      min-height: 100vh;
-      font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto,
-        Helvetica, Arial, "Apple Color Emoji", "Segoe UI Emoji";
-      color: var(--text);
-      background:
-        radial-gradient(900px 600px at 15% 10%, rgba(124, 92, 255, 0.35), transparent 60%),
-        radial-gradient(900px 600px at 85% 30%, rgba(34, 197, 94, 0.20), transparent 60%),
-        linear-gradient(180deg, #070a12, var(--bg));
-      display: grid;
-      place-items: center;
-      padding: 26px;
-    }
-    .card {
-      width: min(760px, 92vw);
-      border-radius: var(--radius);
-      border: 1px solid var(--line);
-      background: rgba(255,255,255,0.04);
-      backdrop-filter: blur(10px);
-      box-shadow: var(--shadow);
-      padding: 26px;
-      text-align: center;
-    }
-    .badge {
-      display: inline-flex;
-      align-items: center;
-      gap: 10px;
-      padding: 8px 12px;
-      border: 1px solid var(--line);
-      border-radius: 999px;
-      background: rgba(255,255,255,0.04);
-      color: var(--muted);
-      font-weight: 650;
-      font-size: 13px;
-      margin-bottom: 14px;
-    }
-    .dot {
-      width: 8px;
-      height: 8px;
-      border-radius: 99px;
-      background: var(--accent2);
-      box-shadow: 0 0 0 4px rgba(34, 197, 94, 0.18);
-    }
-    h1 {
-      margin: 10px 0 8px;
-      font-size: clamp(26px, 4vw, 40px);
-      letter-spacing: -0.6px;
-      line-height: 1.1;
-    }
-    p {
-      margin: 0 auto;
-      max-width: 60ch;
-      color: var(--muted);
-      line-height: 1.6;
-      font-size: 15px;
-    }
-    .summary {
-      margin: 16px auto 0;
-      max-width: 520px;
-      text-align: left;
-      border: 1px solid var(--line);
-      border-radius: 16px;
-      background: rgba(255,255,255,0.03);
-      padding: 14px;
-      color: var(--muted);
-      font-size: 14px;
-    }
-    .row {
-      display: flex;
-      justify-content: space-between;
-      gap: 10px;
-      padding: 8px 6px;
-      border-bottom: 1px solid rgba(255,255,255,0.08);
-    }
-    .row:last-child { border-bottom: none; }
-    .key { color: rgba(255,255,255,0.65); }
-    .val { color: rgba(255,255,255,0.92); font-weight: 650; text-align: right; overflow-wrap: anywhere; }
+    <style>
+      :root {
+        --bg: #0b0f19;
+        --text: rgba(255, 255, 255, 0.92);
+        --muted: rgba(255, 255, 255, 0.7);
+        --line: rgba(255, 255, 255, 0.12);
+        --accent: #7c5cff;
+        --accent2: #22c55e;
+        --radius: 18px;
+        --shadow: 0 10px 30px rgba(0, 0, 0, 0.35);
+      }
+      * {
+        box-sizing: border-box;
+      }
+      body {
+        margin: 0;
+        min-height: 100vh;
+        font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto,
+          Helvetica, Arial, "Apple Color Emoji", "Segoe UI Emoji";
+        color: var(--text);
+        background: radial-gradient(
+            900px 600px at 15% 10%,
+            rgba(124, 92, 255, 0.35),
+            transparent 60%
+          ),
+          radial-gradient(
+            900px 600px at 85% 30%,
+            rgba(34, 197, 94, 0.2),
+            transparent 60%
+          ),
+          linear-gradient(180deg, #070a12, var(--bg));
+        display: grid;
+        place-items: center;
+        padding: 26px;
+      }
+      .card {
+        width: min(760px, 92vw);
+        border-radius: var(--radius);
+        border: 1px solid var(--line);
+        background: rgba(255, 255, 255, 0.04);
+        backdrop-filter: blur(10px);
+        box-shadow: var(--shadow);
+        padding: 26px;
+        text-align: center;
+      }
+      .badge {
+        display: inline-flex;
+        align-items: center;
+        gap: 10px;
+        padding: 8px 12px;
+        border: 1px solid var(--line);
+        border-radius: 999px;
+        background: rgba(255, 255, 255, 0.04);
+        color: var(--muted);
+        font-weight: 650;
+        font-size: 13px;
+        margin-bottom: 14px;
+      }
+      .dot {
+        width: 8px;
+        height: 8px;
+        border-radius: 99px;
+        background: var(--accent2);
+        box-shadow: 0 0 0 4px rgba(34, 197, 94, 0.18);
+      }
+      h1 {
+        margin: 10px 0 8px;
+        font-size: clamp(26px, 4vw, 40px);
+        letter-spacing: -0.6px;
+        line-height: 1.1;
+      }
+      p {
+        margin: 0 auto;
+        max-width: 60ch;
+        color: var(--muted);
+        line-height: 1.6;
+        font-size: 15px;
+      }
+      .summary {
+        margin: 16px auto 0;
+        max-width: 520px;
+        text-align: left;
+        border: 1px solid var(--line);
+        border-radius: 16px;
+        background: rgba(255, 255, 255, 0.03);
+        padding: 14px;
+        color: var(--muted);
+        font-size: 14px;
+      }
+      .row {
+        display: flex;
+        justify-content: space-between;
+        gap: 10px;
+        padding: 8px 6px;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+      }
+      .row:last-child {
+        border-bottom: none;
+      }
+      .key {
+        color: rgba(255, 255, 255, 0.65);
+      }
+      .val {
+        color: rgba(255, 255, 255, 0.92);
+        font-weight: 650;
+        text-align: right;
+        overflow-wrap: anywhere;
+      }
 
-    .actions {
-      margin-top: 18px;
-      display: flex;
-      justify-content: center;
-      gap: 10px;
-      flex-wrap: wrap;
-    }
-    .btn {
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      gap: 10px;
-      padding: 10px 14px;
-      border-radius: 14px;
-      border: 1px solid var(--line);
-      background: rgba(255, 255, 255, 0.05);
-      color: var(--text);
-      font-weight: 650;
-      cursor: pointer;
-      transition: transform 0.12s ease, background 0.12s ease, border-color 0.12s ease;
-      text-decoration: none;
-    }
-    .btn:hover {
-      transform: translateY(-1px);
-      background: rgba(255, 255, 255, 0.09);
-      border-color: rgba(255, 255, 255, 0.2);
-    }
-    .btn-primary {
-      border-color: rgba(124, 92, 255, 0.50);
-      background: linear-gradient(135deg, rgba(124, 92, 255, 0.35), rgba(124, 92, 255, 0.10));
-    }
-    footer {
-      margin-top: 16px;
-      font-size: 12px;
-      color: rgba(255,255,255,0.55);
-    }
-  </style>
-</head>
+      .actions {
+        margin-top: 18px;
+        display: flex;
+        justify-content: center;
+        gap: 10px;
+        flex-wrap: wrap;
+      }
+      .btn {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        gap: 10px;
+        padding: 10px 14px;
+        border-radius: 14px;
+        border: 1px solid var(--line);
+        background: rgba(255, 255, 255, 0.05);
+        color: var(--text);
+        font-weight: 650;
+        cursor: pointer;
+        transition: transform 0.12s ease, background 0.12s ease,
+          border-color 0.12s ease;
+        text-decoration: none;
+      }
+      .btn:hover {
+        transform: translateY(-1px);
+        background: rgba(255, 255, 255, 0.09);
+        border-color: rgba(255, 255, 255, 0.2);
+      }
+      .btn-primary {
+        border-color: rgba(124, 92, 255, 0.5);
+        background: linear-gradient(
+          135deg,
+          rgba(124, 92, 255, 0.35),
+          rgba(124, 92, 255, 0.1)
+        );
+      }
+      footer {
+        margin-top: 16px;
+        font-size: 12px;
+        color: rgba(255, 255, 255, 0.55);
+      }
+    </style>
+  </head>
 
-<body>
-  <!-- ✅ Paste your GTM <noscript> snippet right below this line for your demo -->
+  <body>
+    <!-- ✅ Paste your GTM <noscript> snippet right below this line for your demo -->
+    <!-- Google Tag Manager (noscript) -->
+    <noscript
+      ><iframe
+        src="https://www.googletagmanager.com/ns.html?id=GTM-5FC45FMJ"
+        height="0"
+        width="0"
+        style="display: none; visibility: hidden"
+      ></iframe
+    ></noscript>
+    <!-- End Google Tag Manager (noscript) -->
+    <main class="card">
+      <div class="badge"><span class="dot"></span> Submission received</div>
+      <h1>Thanks — you’re in! ✅</h1>
+      <p>
+        We’ve received your details. Our team will contact you soon with
+        membership options and class timings.
+      </p>
 
-  <main class="card">
-    <div class="badge"><span class="dot"></span> Submission received</div>
-    <h1>Thanks — you’re in! ✅</h1>
-    <p>
-      We’ve received your details. Our team will contact you soon with membership options and class timings.
-    </p>
+      <div class="summary" id="summary" style="display: none">
+        <div class="row">
+          <div class="key">Name</div>
+          <div class="val" id="s-name"></div>
+        </div>
+        <div class="row">
+          <div class="key">Email</div>
+          <div class="val" id="s-email"></div>
+        </div>
+        <div class="row">
+          <div class="key">Phone</div>
+          <div class="val" id="s-phone"></div>
+        </div>
+      </div>
 
-    <div class="summary" id="summary" style="display:none;">
-      <div class="row"><div class="key">Name</div><div class="val" id="s-name"></div></div>
-      <div class="row"><div class="key">Email</div><div class="val" id="s-email"></div></div>
-      <div class="row"><div class="key">Phone</div><div class="val" id="s-phone"></div></div>
-    </div>
+      <div class="actions">
+        <a class="btn btn-primary" href="index.html">Back to Home</a>
+        <a class="btn" href="index.html#join-form">Submit Another</a>
+      </div>
 
-    <div class="actions">
-      <a class="btn btn-primary" href="index.html">Back to Home</a>
-      <a class="btn" href="index.html#join-form">Submit Another</a>
-    </div>
+      <footer>
+        © <span id="year"></span> PulseFit Gym — Demo site for GTM tracking
+        practice.
+      </footer>
+    </main>
 
-    <footer>© <span id="year"></span> PulseFit Gym — Demo site for GTM tracking practice.</footer>
-  </main>
+    <script>
+      document.getElementById("year").textContent = new Date().getFullYear();
 
-  <script>
-    document.getElementById("year").textContent = new Date().getFullYear();
+      // Read query params for demo display (optional)
+      const params = new URLSearchParams(window.location.search);
+      const name = params.get("name");
+      const email = params.get("email");
+      const phone = params.get("phone");
 
-    // Read query params for demo display (optional)
-    const params = new URLSearchParams(window.location.search);
-    const name = params.get("name");
-    const email = params.get("email");
-    const phone = params.get("phone");
+      if (name || email || phone) {
+        document.getElementById("summary").style.display = "block";
+        document.getElementById("s-name").textContent = name || "-";
+        document.getElementById("s-email").textContent = email || "-";
+        document.getElementById("s-phone").textContent = phone || "-";
+      }
 
-    if (name || email || phone) {
-      document.getElementById("summary").style.display = "block";
-      document.getElementById("s-name").textContent = name || "-";
-      document.getElementById("s-email").textContent = email || "-";
-      document.getElementById("s-phone").textContent = phone || "-";
-    }
-
-    // ✅ Optional: push a "thank_you_page_view" event for GTM practice
-    window.dataLayer = window.dataLayer || [];
-    window.dataLayer.push({
-      event: "thank_you_page_view",
-      page_type: "thank_you"
-    });
-  </script>
-</body>
+      // ✅ Optional: push a "thank_you_page_view" event for GTM practice
+      window.dataLayer = window.dataLayer || [];
+      window.dataLayer.push({
+        event: "thank_you_page_view",
+        page_type: "thank_you",
+      });
+    </script>
+  </body>
 </html>
